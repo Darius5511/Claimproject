@@ -1,0 +1,98 @@
+﻿@model capstoneproject.Models.zc
+
+@{
+    ViewBag.Title = "Home Page";
+}
+@section Styles {
+    <link href="~/Content/popup.css" rel="stylesheet" />
+}
+
+<!-- Banner -->
+<!--
+    Note: To show a background image, set the "data-bg" attribute below
+    to the full filename of your image. This is used in each section to set
+    the background image.
+-->
+<section id="banner" class="bg-img" data-bg="ff.jpg">
+    <div class="inner">
+        <header>
+            <h1>Welcome to Grade for Grades</h1>
+            <strong><p>Where you can find education for your kids</p></strong>
+            <ul class="actions">
+                @*<link href="~/Content/popup.css" rel="stylesheet" />*@
+                <!--div class=" box"-->
+                <!--div class=" box"-->
+                <li><a class="big button" href="#popup1">Get  Started </a></li>
+                <!--</div>-->
+                <!--><div id="popup1" class="overlay"><!-->
+                <li>
+                    <div class="popup">
+                        @using (Html.BeginForm("Search", "zcs", FormMethod.Get))
+                    {
+                        <h2 style="color : black">Please Enter Your Zip Code </h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            @Html.EditorFor(model => model.zipcode, new { htmlAttributes = new { @class = "form-control" } })
+
+                            <br>
+
+                            <input type="submit" value="Submit">
+
+                        </div>
+                }
+                    </div>
+                </li>
+            </ul>
+        </header>
+
+    </div>
+
+
+</section>
+<ul class="actions">
+
+
+    @*<link href="~/Content/popup.css" rel="stylesheet" />*@
+
+
+    <!--<a href="#one" class="more">Learn More</a>-->
+    </section>
+
+    <!-- One -->
+    <section id="one" class="wrapper post bg-img" data-bg="pk.jpg">
+        <div class="inner">
+            <article class="box">
+                <header>
+                    <h2>About Grade for Grades</h2>
+                </header>
+                <div class="content">
+                    <p><font color="white"> Grade for Grades has the soul purpouse to help find out what school diatrict you in but ultimately help you find a school to enroll your child or children in. </font></p>
+                </div>
+                <footer>
+                    <a href="~/Home/About" class="button alt">Learn More</a>
+
+                </footer>
+            </article>
+        </div>
+        <!--<a href="#two" class="more">Learn More</a> -->
+    </section>
+
+    <!-- Two -->
+    <section id="two" class="wrapper post bg-img" data-bg="ed.png">
+        <!-- <div class="inner">
+                <article class="box">
+                    <header>
+                        <h2>Mus elit a ultricies at</h2>
+                        <p>12.21.2016</p>
+                    </header>
+                    <div class="content">
+                        <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                    </div>
+                    <footer>
+                        <a href="generic.html" class="button alt">Learn More</a>
+                    </footer>
+                </article>
+            </div>
+            <a href="#three" class="more">Learn More</a>
+        </section> -->
+

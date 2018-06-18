@@ -1,0 +1,111 @@
+﻿<html>
+<head>
+    <title>School</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/main.css" rel="stylesheet" />
+    @RenderSection("Styles", false)
+    @RenderSection("Scripts", required: false)
+
+</head>
+<body class="subpage">
+
+
+
+    <!-- Header -->
+    <header id="header" class="alt">
+
+        <div class="logo"><a href="index.html">@ViewBag.Title</div>
+
+        <a href="#menu"><span>Menu</span></a>
+
+    </header>
+    <!-- Nav -->
+    <nav id="menu">
+
+        <ul class="links">
+
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Admin", "Index", "sks")</li>
+
+
+
+
+        </ul>
+
+    </nav>
+
+
+    @RenderBody()
+
+    <footer id="footer">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+
+        <div class="inner">
+
+            <h2>Having a problem with this site? </h2>
+            <center><strong><p>Type whats wrong & send a message</p></strong></center>
+
+
+            <div class="field half">
+                <center><font color="White">Name</font></center>
+
+                <div class="col-md-10">
+                    <center><input type="text" /></center>
+                </div>
+            </div>
+
+            <div class="field half">
+                <center><font color="White">Email</font></center>
+                <div class="col-md-10">
+                    <center><input type="text" /></center>
+                </div>
+            </div>
+
+            <div class="field">
+                <center><font color="White">Message</font></center>
+                <div class="col-md-10">
+                    <center><textarea></textarea></center>
+                </div>
+            </div>
+
+            <div class="field">
+                <center>
+                    <input value="Send Message" class="button alt" type="submit"/>
+                  </center>
+                  </div>
+
+
+                    <ul class="icons">
+                        <li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+                    </ul>
+
+            </div>
+}
+</footer>
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.min.js"></script>
+
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+
+    <script src="~/Scripts/skel.min.js"></script>
+
+    <script src="~/Scripts/util.js"></script>
+
+    <script src="~/Scripts/main.js"></script>
+
+
+</body>
+</html>
